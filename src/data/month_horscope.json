@@ -1,0 +1,14 @@
+[
+  {"id": "m01",  "title": "الحمل", "icon": "m1", "uri": "./src/assets/icon/m1.png"},
+  {"id": "m02",  "title": "الثور", "icon": "m2", "uri": "../assets/icon/m1.png"},
+  {"id": "m03",  "title": "الجوزاء", "icon": "m3", "uri": "../assets/icon/m1.png"},
+  {"id": "m04",  "title": "السرطان", "icon": "m4", "uri": "../assets/icon/m1.png"},
+  {"id": "m05",  "title": "الأسد", "icon": "m5", "uri": "../assets/icon/m1.png" },
+  {"id": "m06",  "title": "العذراء", "icon": "m6", "uri": "../assets/icon/m1.png" },
+  {"id": "m07",  "title": "الميزان", "icon": "m7", "uri": "../assets/icon/m1.png" },
+  {"id": "m08",  "title": "العقرب", "icon": "m8", "uri": "../assets/icon/m1.png" },
+  {"id": "m09",  "title": "القوس", "icon": "m9", "uri": "../assets/icon/m1.png" },
+  {"id": "m10",  "title": "الجدي", "icon": "m10", "uri": "../assets/icon/m1.png" },
+  {"id": "m11",  "title": "الدلو", "icon": "m11", "uri": "../assets/icon/m1.png" },
+  {"id": "m12",  "title": "الحوت", "icon": "m12", "uri": "../assets/icon/m1.png" }
+]

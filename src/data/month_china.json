@@ -1,0 +1,14 @@
+[
+  {"id": "y01",   "title": "الفأر", "icon": "mc1", "uri": "./src/assets/icon/mc1.png" },
+  {"id": "y02",   "title": "البقرة", "icon": "mc2", "uri": "./src/assets/icon/mc2.png" },
+  {"id": "y03",   "title": "النَّمِرُ", "icon": "mc3", "uri": "./src/assets/icon/mc3.png" },
+  {"id": "y04",   "title": "الأرنب", "icon": "mc4", "uri": "./src/assets/icon/mc4.png" },
+  {"id": "y05",   "title": "الحوت", "icon": "mc5", "uri": "./src/assets/icon/mc5.png" },
+  {"id": "y06",   "title": "الثعبان", "icon": "mc6", "uri": "./src/assets/icon/mc6.png" },
+  {"id": "y07",   "title": "الحصان", "icon": "mc7", "uri": "./src/assets/icon/mc7.png" },
+  {"id": "y08",   "title": "الخروف", "icon": "mc8", "uri": "./src/assets/icon/mc8.png" },
+  {"id": "y09",   "title": "سعدان", "icon": "mc9", "uri": "./src/assets/icon/mc9.png" },
+  {"id": "y10",   "title": "الديك", "icon": "mc10", "uri": "./src/assets/icon/mc10.png" },
+  {"id": "y11",   "title": "الكلب", "icon": "mc11", "uri": "./src/assets/icon/mc11.png" },
+  {"id": "y12",   "title": "الخنزير", "icon": "mc12", "uri": "./src/assets/icon/mc12.png" }
+]

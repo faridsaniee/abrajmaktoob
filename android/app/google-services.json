@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "34873798909",
+    "firebase_url": "https://abrajmaktoob-efa7f.firebaseio.com",
+    "project_id": "abrajmaktoob-efa7f",
+    "storage_bucket": "abrajmaktoob-efa7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34873798909:android:8e0ba7ed577364ca",
+        "android_client_info": {
+          "package_name": "com.abraj.alyoum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34873798909-cuaftdthft3bir7djjpo537o1v1dmvre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpo75vnowPXtjag8u1vZdM-FQ4BXelJi4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-5941652146529991~9893279074"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34873798909:android:94f5da85eda1ab9e",
+        "android_client_info": {
+          "package_name": "com.horscope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34873798909-cuaftdthft3bir7djjpo537o1v1dmvre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpo75vnowPXtjag8u1vZdM-FQ4BXelJi4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
