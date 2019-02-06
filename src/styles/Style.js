@@ -470,7 +470,35 @@ const styles = StyleSheet.create({
     //color:'white',
     fontSize: 14,
   },
-  gridView:{height: 400}
+  gridView:{height: 400},
+  wedding_container:{justifyContent: "center",flex:0,flexDirection:"row",alignItems: "center", height:90},
+  wedding_symbol: {width:"20%",alignContent:"center", alignItems:"center"},
+  wedding_symbol_caption: 
+  {
+    fontSize:10,
+    color:"#FFF",
+    ...Platform.select({
+      ios: {
+        //fontFamily: 'Tajawal-Black',
+      },
+      android: {
+        fontFamily: 'Tajawal-light'
+      }
+    }),
+  },
+  wedding_sign: {width:"20%", alignContent:"center", alignItems:"center"},
+  wedding_sign_caption: 
+  {
+    color:"#FFF",
+    ...Platform.select({
+      ios: {
+        //fontFamily: 'Tajawal-Black',
+      },
+      android: {
+        fontFamily: 'Tajawal-light'
+      }
+    }),
+  },
 });
 
 

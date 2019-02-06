@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {TouchableHighlight, Text, View, StatusBar, Image, I18nManager,TouchableOpacity, AsyncStorage} from 'react-native';
+import {NetInfo, Text, View, StatusBar, Image, I18nManager,ScrollView, AsyncStorage} from 'react-native';
+import DeviceInfo from 'react-native-device-info';
 import {Actions} from 'react-native-router-flux';
 import styles from '../styles/Style.js';
 import RNFirebase from 'react-native-firebase';
@@ -20,7 +21,54 @@ let icon_male = "";
 let icon_female = "";
 let icon_male_text = "";
 let icon_female_text = "";
+var connectionStatus = false;
+NetInfo.isConnected.fetch().then(isConnected => {
+  connectionStatus = isConnected
+});
+NetInfo.isConnected.addEventListener(
+  'connectionChange',
+  isConnected => {
+    connectionStatus = isConnected
+});
 class Wedding extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            body: "انتظر..."
+        }
+    }
+    getUrl(){
+        icon_male = this.props.male_icon;
+        icon_female = this.props.female_icon;
+        // var id = this.props.id;
+        const getUniqueID = DeviceInfo.getUniqueID();
+        return 'http://api.abrajmaktoob.com/api-horoscope?action=wedding&male_id='+ icon_male + '&female_id=' + icon_female +'&cid='+getUniqueID;
+    }
+    componentWillMount() 
+    {
+      if(connectionStatus)
+      {
+        fetch(this.getUrl() , {
+            headers: {
+                'Cache-Control': 'no-cache'
+            }
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+            this.setState({
+                data: responseJson,
+                body: responseJson.result_wedding.data,
+            })
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+      }
+      else
+      {
+        body: "انتظر...";
+      }
+    }
   render() 
   {
     icon_male = this.props.male_icon;
@@ -36,20 +84,20 @@ class Wedding extends React.Component {
         style={styles.background_image} />
         <StatusBar hidden={true} />
         <View style={[styles.container, {}]}>
-            <View style={{justifyContent: "center",flex:0,flexDirection:"row",alignItems: "center", height:90}}>
-                <View style={{width:"20%",alignContent:"center", alignItems:"center"}}>
+            <View style={[styles.wedding_container, {}]}>
+                <View style={[styles.wedding_symbol, {}]}>
                     <Image
                     style={{width: 40, height: 40}}
                     source={require('../assets/icon/icon-male.png')}
                     />
-                    <Text style={{color:"#FFF"}}>{"الذكر"}</Text>
+                    <Text style={[styles.wedding_symbol_caption, {}]}>{"الذكر"}</Text>
                 </View>
-                <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
+                <View style={[styles.wedding_sign, {}]}>
                     <Image
                     style={{width: 40, height: 40}}
                     source={{uri: 'asset:/icon/'+icon_male+'.png'}}
                     />
-                    <Text style={{color:"#FFF"}}>{icon_male_text}</Text>
+                    <Text style={[styles.wedding_sign_caption, {}]}>{icon_male_text}</Text>
                 </View>
                 <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
                         <Image
@@ -57,23 +105,25 @@ class Wedding extends React.Component {
                         source={require('../assets/icon/icon-mafema.png')}
                         />
                 </View>
-                <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
+                <View style={[styles.wedding_sign, {}]}>
                     <Image
                     style={{width: 40, height: 40}}
                     source={{uri: 'asset:/icon/'+icon_female+'.png'}}
                         />
-                    <Text style={{color:"#FFF"}}>{icon_female_text}</Text>
+                    <Text style={[styles.wedding_sign_caption, {}]}>{icon_female_text}</Text>
                 </View>
-                <View style={{width:"20%",alignContent:"center", alignItems:"center"}}>
+                <View style={[styles.wedding_symbol, {}]}>
                     <Image
                     style={{width: 40, height: 40}}
                     source={require('../assets/icon/icon-female.png')}
                     />
-                    <Text style={{color:"#FFF"}}>{"إناثا"}</Text>
+                    <Text style={[styles.wedding_symbol_caption, {}]}>{"إناثا"}</Text>
                 </View>
             </View>
             <View style={{flex: 1, flexDirection: 'column', padding: 0}}>
-                <View style={{width: "100%"}}></View>
+                <ScrollView showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={true} style={[styles.container, {}]} scrollEnabled>
+                    <Text style={styles.month_body}>{this.state.body}</Text>
+                </ScrollView>
             </View>
         </View>
         <Banner

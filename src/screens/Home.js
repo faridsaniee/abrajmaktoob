@@ -279,20 +279,20 @@ const forthRoute = () =>
 const fifthRoute = () =>
 (
   <View style={[styles.container, {}]}>
-    <View style={{justifyContent: "center",flex:0,flexDirection:"row",alignItems: "center", height:90}}>
-      <View style={{width:"20%",alignContent:"center", alignItems:"center"}}>
+    <View style={[styles.wedding_container, {}]}>
+      <View style={[styles.wedding_symbol, {}]}>
         <Image
           style={{width: 40, height: 40}}
           source={require('../assets/icon/icon-male.png')}
         />
-        <Text style={{color:"#FFF"}}>{"الذكر"}</Text>
+        <Text style={[styles.wedding_symbol_caption, {}]}>{"الذكر"}</Text>
       </View>
-      <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
+      <View style={[styles.wedding_sign, {}]}>
         <Image
           style={{width: 40, height: 40}}
           source={{uri: 'asset:/icon/'+icon_male+'.png'}}
           />
-        <Text style={{color:"#FFF"}}>{icon_male_text}</Text>
+        <Text style={[styles.wedding_sign_caption, {}]}>{icon_male_text}</Text>
       </View>
       <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
         {wedding_btn_status? 
@@ -305,19 +305,19 @@ const fifthRoute = () =>
           : null }
 
       </View>
-      <View style={{width:"20%", alignContent:"center", alignItems:"center"}}>
+      <View style={[styles.wedding_sign, {}]}>
         <Image
           style={{width: 40, height: 40}}
           source={{uri: 'asset:/icon/'+icon_female+'.png'}}
             />
-        <Text style={{color:"#FFF"}}>{icon_female_text}</Text>
+        <Text style={[styles.wedding_sign_caption, {}]}>{icon_female_text}</Text>
       </View>
       <View style={{width:"20%",alignContent:"center", alignItems:"center"}}>
         <Image
           style={{width: 40, height: 40}}
           source={require('../assets/icon/icon-female.png')}
           />
-          <Text style={{color:"#FFF"}}>{"إناثا"}</Text>
+          <Text style={[styles.wedding_symbol_caption, {}]}>{"إناثا"}</Text>
       </View>
     </View>
     <SuperGridSectionList
