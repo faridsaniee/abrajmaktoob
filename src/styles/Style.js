@@ -482,7 +482,7 @@ const styles = StyleSheet.create({
         //fontFamily: 'Tajawal-Black',
       },
       android: {
-        fontFamily: 'Tajawal-light'
+        fontFamily: 'Tajawal-Light'
       }
     }),
   },
@@ -495,7 +495,7 @@ const styles = StyleSheet.create({
         //fontFamily: 'Tajawal-Black',
       },
       android: {
-        fontFamily: 'Tajawal-light'
+        fontFamily: 'Tajawal-Light'
       }
     }),
   },
