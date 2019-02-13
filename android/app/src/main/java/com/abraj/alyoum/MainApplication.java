@@ -2,6 +2,7 @@ package com.abraj.alyoum;
 
 import android.app.Application;
 import com.facebook.react.ReactApplication;
+import com.appsee.reactnative.AppseeReactPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.oblador.vectoricons.VectorIconsPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -18,7 +19,6 @@ import com.facebook.soloader.SoLoader;
 import com.facebook.react.modules.i18nmanager.I18nUtil;
 import java.util.Arrays;
 import java.util.List;
-//import io.appnex.android
 import io.appnex.android.notification.Appnex;
 
 
@@ -33,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AppseeReactPackage(),
             new RNDeviceInfo(),
             new VectorIconsPackage(),
             new SplashScreenReactPackage(),
@@ -63,5 +64,6 @@ public class MainApplication extends Application implements ReactApplication {
     I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
     sharedI18nUtilInstance.forceRTL(this,true);
     sharedI18nUtilInstance.allowRTL(this, true);
+    //Appsee.start();
   }
 }

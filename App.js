@@ -22,7 +22,11 @@ import MenuRightScreen from './src/component/MenuRight';
 
 // import DrawerLayout from './src/screens/DrawerLayout';
 I18nManager.forceRTL(true);
+// import { hotjar } from 'react-hotjar';
+// hotjar.initialize(, hjsv);
 
+var Appsee = require('react-native-appsee');
+Appsee.start("192dcad3fa01459f809ec1b53921d457");
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',

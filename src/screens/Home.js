@@ -14,6 +14,11 @@ import styles from '../styles/Style.js';
 import styles_home from '../styles/style_home.js';
 I18nManager.forceRTL(true);
 
+
+var Appsee = require('react-native-appsee');
+Appsee.start("192dcad3fa01459f809ec1b53921d457");
+Appsee.startScreen();
+
 const firebaseApp = RNFirebase.initializeApp({ debug: false });
 firebaseApp.admob().initialize('ca-app-pub-5941652146529991~9893279074');
 const Banner = RNFirebase.admob.Banner;

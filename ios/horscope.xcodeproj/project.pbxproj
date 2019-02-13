@@ -118,6 +118,8 @@
 		E77AB847F7E145549EFD7F8E /* libDatepicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A31129134AB456EABB3FC41 /* libDatepicker.a */; };
 		B0BF21545A3F41A8B6E4FECB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A2C3A462554E23944D67B8 /* libRNDeviceInfo.a */; };
 		989939D3ECDF40FA92AD02BE /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7711B05B05FA448A8BAED8F2 /* libRNDeviceInfo-tvOS.a */; };
+		6F2795BBCD67420494430C3A /* libRNAppsee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC376654AC74154977EDB3C /* libRNAppsee.a */; };
+		9349FD9D1EC6405495D93E70 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CD015D86704F179B68EF57 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -510,6 +512,9 @@
 		6C25864825DB47C98CDEDB0B /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; name = "RNDeviceInfo.xcodeproj"; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		30A2C3A462554E23944D67B8 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo.a"; path = "libRNDeviceInfo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		7711B05B05FA448A8BAED8F2 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo-tvOS.a"; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1C67D96FE4FC427F8AF02D9E /* RNAppsee.xcodeproj */ = {isa = PBXFileReference; name = "RNAppsee.xcodeproj"; path = "../node_modules/react-native-appsee/ios/RNAppsee.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1CC376654AC74154977EDB3C /* libRNAppsee.a */ = {isa = PBXFileReference; name = "libRNAppsee.a"; path = "libRNAppsee.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		52CD015D86704F179B68EF57 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -544,6 +549,8 @@
 				D451ADB712674688BD95775A /* StarRatingViewDemoTests.xctest in Resources */,
 				E77AB847F7E145549EFD7F8E /* libDatepicker.a in Frameworks */,
 				B0BF21545A3F41A8B6E4FECB /* libRNDeviceInfo.a in Frameworks */,
+				6F2795BBCD67420494430C3A /* libRNAppsee.a in Frameworks */,
+				9349FD9D1EC6405495D93E70 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +704,7 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				52CD015D86704F179B68EF57 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -740,6 +748,7 @@
 				C50B7D96D81C4778A6FB3CDF /* StarRatingViewDemo.xcodeproj */,
 				B2AD76F03C2D413AB8860A61 /* Datepicker.xcodeproj */,
 				6C25864825DB47C98CDEDB0B /* RNDeviceInfo.xcodeproj */,
+				1C67D96FE4FC427F8AF02D9E /* RNAppsee.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1527,6 +1536,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1536,6 +1546,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Debug;
@@ -1568,6 +1579,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1577,6 +1589,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Release;
@@ -1605,6 +1618,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Debug;
@@ -1632,6 +1646,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Release;
@@ -1672,6 +1687,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1681,6 +1697,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Debug;
@@ -1721,6 +1738,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1730,6 +1748,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Release;
@@ -1769,6 +1788,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1778,6 +1798,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Debug;
@@ -1817,6 +1838,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1826,6 +1848,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-star-rating-view\Demo\StarRatingViewDemo\ios\StarRatingViewDemo",
 					"$(SRCROOT)\..\node_modules\react-native-universal-datepicker-ios\Datepicker\Datepicker",
 					"$(SRCROOT)\..\node_modules\react-native-device-info\ios\RNDeviceInfo",
+					"$(SRCROOT)\..\node_modules\react-native-appsee\ios",
 				);
 			};
 			name = Release;
