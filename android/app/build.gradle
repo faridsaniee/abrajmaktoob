@@ -103,13 +103,13 @@ android {
         applicationId "com.abraj.alyoum"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.0.7"
+        versionCode 9
+        versionName "1.0.8"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
         manifestPlaceholders = [
-            appnex_channel_id           : 'A-Abraj-1.0.7',
+            appnex_channel_id           : 'A-Abraj-1.0.8',
             appnex_app_id               : 'baabecc6-3a16-e911-a94f-0050568c8c46',
             // Project number pulled from dashboard, local value is ignored.
             appnex_google_project_number: '34873798909'
