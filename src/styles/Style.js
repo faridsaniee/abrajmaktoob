@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   tabItem: {
-    width: "25%",
+    width: "20%",
     height: 60,
     alignItems:'center',
   },

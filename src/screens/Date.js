@@ -9,6 +9,7 @@ import RNFirebase from 'react-native-firebase';
 
 import Month_horscope from '../data/month_horscope.json';
 import Month_china from '../data/month_china.json';
+
 I18nManager.forceRTL(true);
 
 const firebaseApp = RNFirebase.initializeApp({ debug: false });

@@ -70,7 +70,7 @@ class Home extends React.Component {
       { key: 'tab2', title: 'الصينية' },
       { key: 'tab3', title: 'اليونانية' },
       { key: 'tab4', title: 'مزيج' },
-      // { key: 'tab5', title: 'زواج' },
+      { key: 'tab5', title: 'زواج' },
     ],
   };
 
@@ -87,7 +87,7 @@ class Home extends React.Component {
     tab2: SecondRoute,
     tab3: thirdRoute,
     tab4: forthRoute,
-    //tab5: fifthRoute,
+    tab5: fifthRoute,
   })
   _handleIndexChange = index => this.setState({ index });
   _renderHeader = props => {

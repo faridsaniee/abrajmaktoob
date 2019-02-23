@@ -10,9 +10,9 @@ import Month_china from '../data/month_china.json';
 I18nManager.forceRTL(true);
 
 const firebaseApp = RNFirebase.initializeApp({ debug: false });
-firebaseApp.admob().initialize('ca-app-pub-5941652146529991~9893279074');
+//firebaseApp.admob().initialize('ca-app-pub-5941652146529991~9893279074');
 firebaseApp.analytics().logEvent('Wedding');
-const advert = firebaseApp.admob().interstitial('ca-app-pub-5941652146529991/3563380265');
+//const advert = firebaseApp.admob().interstitial('ca-app-pub-5941652146529991/3563380265');
 const Banner = RNFirebase.admob.Banner;
 const AdRequest = RNFirebase.admob.AdRequest;
 const request = new AdRequest();
@@ -75,8 +75,8 @@ class Wedding extends React.Component {
     icon_female = this.props.female_icon;
     icon_male_text = this.props.male_icon_text;
     icon_female_text = this.props.female_icon_text;
-    advert.loadAd(request.build());
-    advert.on('onAdLoaded', () => {advert.show();});
+    //advert.loadAd(request.build());
+    //advert.on('onAdLoaded', () => {advert.show();});
     return (
     <View style={styles.container}>
         <Image
