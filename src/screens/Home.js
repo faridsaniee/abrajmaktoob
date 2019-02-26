@@ -70,7 +70,7 @@ class Home extends React.Component {
       { key: 'tab2', title: 'الصينية' },
       { key: 'tab3', title: 'اليونانية' },
       { key: 'tab4', title: 'مزيج' },
-      { key: 'tab5', title: 'زواج' },
+      { key: 'tab5', title: 'التوافق' },
     ],
   };
 
@@ -124,13 +124,20 @@ class Home extends React.Component {
       {
         icon_male = someParameter.img;
         icon_male_text = someParameter.text;
+        icon_female = "";
+        icon_female_text = "";
       }
       if(counter == 2)
       {
-        wedding_btn_status = true;
+        wedding_btn_status = false;
         icon_female = someParameter.img;
         icon_female_text = someParameter.text;
-        counter = 0
+        counter = 0;
+        Actions.wedding({male_icon:icon_male,female_icon:icon_female,male_icon_text:icon_male_text,female_icon_text:icon_female_text});
+        icon_female = "";
+        icon_female_text = "";
+        icon_male = "";
+        icon_male_text = "";
       }
       this.setState({
         routes: [
@@ -138,7 +145,7 @@ class Home extends React.Component {
           { key: 'tab2', title: 'الصينية' },
           { key: 'tab3', title: 'اليونانية' },
           { key: 'tab4', title: 'مزيج' },
-          { key: 'tab5', title: 'زواج' },
+          { key: 'tab5', title: 'التوافق' },
         ],
       })
     }

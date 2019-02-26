@@ -52,7 +52,7 @@ class App extends React.Component {
           <Scene key="rootInside" wrapRouter direction="leftToRight" type={ActionConst.REPLACE}  panHandlers={null} >
             <Scene key="home" component={HomeScreen} navBar={NavbarScreen} path="default" title="أبراج مكتوب" wrapRouter drawerLockMode='locked-closed' gesturesEnabled={false}  />
             <Scene key="star" navTransparent={0} component={StarScreen} navBar={NavbarScreen} title="مزيج" wrapRouter/>
-            <Scene key="wedding" navTransparent={0} component={WeddingScreen} navBar={NavbarScreen} title="زواج" wrapRouter/>
+            <Scene key="wedding" navTransparent={0} component={WeddingScreen} navBar={NavbarScreen} title="التوافق" wrapRouter/>
             <Scene key="year" navTransparent={0} component={YearScreen} navBar={NavbarScreen} title="الصينية" wrapRouter/>
             <Scene key="month" navTransparent={0} component={MonthScreen} navBar={NavbarScreen} title="الغربية" wrapRouter/>
             <Scene key="greece" navTransparent={0} component={GreeceScreen} navBar={NavbarScreen} title="اليونانية" wrapRouter/>

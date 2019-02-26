@@ -4,13 +4,14 @@ import DeviceInfo from 'react-native-device-info';
 import {Actions} from 'react-native-router-flux';
 import styles from '../styles/Style.js';
 import RNFirebase from 'react-native-firebase';
+import StarRating from 'react-native-star-rating';
 
 import Month_horscope from '../data/month_horscope.json';
 import Month_china from '../data/month_china.json';
 I18nManager.forceRTL(true);
 
 const firebaseApp = RNFirebase.initializeApp({ debug: false });
-//firebaseApp.admob().initialize('ca-app-pub-5941652146529991~9893279074');
+firebaseApp.admob().initialize('ca-app-pub-5941652146529991~9893279074');
 firebaseApp.analytics().logEvent('Wedding');
 //const advert = firebaseApp.admob().interstitial('ca-app-pub-5941652146529991/3563380265');
 const Banner = RNFirebase.admob.Banner;
@@ -37,6 +38,11 @@ class Wedding extends React.Component {
             body: "انتظر..."
         }
     }
+    onStarRatingPress(rating) {
+        this.setState({
+          starCount: rating
+        });
+      }
     getUrl(){
         icon_male = this.props.male_icon;
         icon_female = this.props.female_icon;
@@ -58,6 +64,8 @@ class Wedding extends React.Component {
             this.setState({
                 data: responseJson,
                 body: responseJson.result_wedding.data,
+                star: responseJson.result_wedding.star,
+                body_month: responseJson.result_wedding.data_month,
             })
         })
         .catch((error) => {
@@ -67,6 +75,7 @@ class Wedding extends React.Component {
       else
       {
         body: "انتظر...";
+        body_month: "";
       }
     }
   render() 
@@ -120,9 +129,21 @@ class Wedding extends React.Component {
                     <Text style={[styles.wedding_symbol_caption, {}]}>{"إناثا"}</Text>
                 </View>
             </View>
+            <View style={[{width:"100%", alignContent:"center", alignItems: 'center', alignSelf: 'center', paddingBottom: 10, paddingTop: 10,}]}>
+                <StarRating
+                    disabled={true}
+                    maxStars={4}
+                    rating={this.state.star}
+                    reversed = {false}
+                    starSize = {25}
+                    emptyStarColor = "#452f5a"
+                    fullStarColor = "#a874dc"
+                />
+            </View>
             <View style={{flex: 1, flexDirection: 'column', padding: 0}}>
                 <ScrollView showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={true} style={[styles.container, {}]} scrollEnabled>
-                    <Text style={styles.month_body}>{this.state.body}</Text>
+                    <Text style={[styles.month_body,{paddingBottom:30, fontWeight:"400", fontSize: 25, textAlign:"center"}]}>{this.state.body}</Text>
+                    <Text style={styles.month_body}>{this.state.body_month}</Text>
                 </ScrollView>
             </View>
         </View>
